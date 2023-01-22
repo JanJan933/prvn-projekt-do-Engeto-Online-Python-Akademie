@@ -7,7 +7,7 @@ discord: Honza J.#3020
 
 """
 
-# Vstupný text, z kterého budeme vybírat textové stringy.
+# Text, z kterého budeme vybírat textové stringy.
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
@@ -52,7 +52,7 @@ if vstupy.get(jmeno) != heslo:
     quit()
 
 # ÚVOD 2: Po zadaní správných údajů  - uvítání přihlášeného a výběr čísla textu na analýzu
-#                                    - nahlášení chyba, pokud se zadá namísto čísla písmeno a nebo jiné než definované číslo
+#                                    - nahlášení chyby, pokud se zadá místo čísla písmeno a nebo jiné než definované číslo
 statistika = len(TEXTS)
 print(mezera)
 print(f"Welcome to the app, {jmeno}.")
@@ -102,13 +102,13 @@ else:
             numeric += 1
             numeric_suma += int(slovo)
 
-# Hlavní programu 2. část rozdelení slov v textu podle kategorie délky
+# Hlavní programu 2. část rozdělení slov v textu podle kategorie délky
 #                       - uspořádání slov podle kategorie délky
         l = len(slovo)
         pocty_pismen[l] = pocty_pismen.setdefault(l, 0)+1
     usporadani_pocty = sorted(pocty_pismen)
 
-# Ukončení programu 1. část: vypsání počtu slov v texte
+# Ukončení programu 1. část: vypsání počtu slov v textu
 #                           - vypsání počtu slov podle přerozdělení do jednotlivých kategorií
 #                           - vypsání celkového počtu číslic v textu
     print(mezera)
